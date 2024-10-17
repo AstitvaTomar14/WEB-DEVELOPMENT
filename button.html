@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <div><button id="btn1">Button 1</button></div>
+        <div><button id="btn2">Button 2</button></div>
+        <p id="para1">PARAGRAPH 1</p>
+        <p id="para2">PARAGRAPH </p>
+
+    </div>
+    <script>
+        document.getElementById("parent").addEventListener("click",function (event){
+            if (event.target.tagname ==="BUTTON"){
+                alert (event.target.innerHTML = "was clicked");
+            }
+            if(event.target.tagname === "p"){
+                event.target.style.color ="blue";
+            }
+        })
+        let button = document.createElement("button");
+        button.innerText = "Click me";
+        button.id = "btn"
+        document.body.appendChild(button);
+
+        let para = document.createElement("p");
+        para.innerText = "......Insert here.......";
+        para.id = "para"
+        document.body.appendChild(para);
+
+        document.getElementById("btn").addEventListener("click",function(){
+            document.getElementById("para").innerHTML="ABESEC"
+        })
+
+    </script>
+</body>
+</html>
